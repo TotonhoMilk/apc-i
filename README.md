@@ -1,5 +1,3 @@
-# apc-i
-Conteúdo das aulas de computação 1
 # Algoritmos e Programação de Computadores I
 
 
