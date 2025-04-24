@@ -1,10 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(){
     int idade = 0;
 
     printf("Informe sua idade: ");
     scanf("%i", &idade);
+    fflush(stdin);
 
     if(idade >= 16){
         if(idade >= 18 && idade <= 70){
