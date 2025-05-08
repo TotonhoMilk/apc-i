@@ -12,21 +12,21 @@
 
 // =======================DEFINIÇÕES==============================
 // #define DEBUG
-#define TRUE            1
+#define TRUE 1
 //------------------------
-#define CPU_VS_CPU      0
-#define CPU_VS_HUMANO   1
+#define CPU_VS_CPU 0
+#define CPU_VS_HUMANO 1
 //------------------------
-#define QTD_JOGADORES   2
-#define QTD_JOGADAS     3
+#define QTD_JOGADORES 2
+#define QTD_JOGADAS 3
 //------------------------
-#define ZEZINHO         0
-#define BERENICE        1
-#define EMPATE          2
+#define ZEZINHO 0
+#define BERENICE 1
+#define EMPATE 2
 //------------------------
-#define PEDRA           0
-#define PAPEL           1
-#define TESOURA         2
+#define PEDRA 0
+#define PAPEL 1
+#define TESOURA 2
 
 // =====================VARIÁVEIL GLOBAL==========================
 int placar[] = {0, 0, 0};
@@ -80,10 +80,10 @@ int main()
                 continue;
             }
         }
-        
+
         // ------------------TELA SELEÇÃO PERSONAGEM-----------------------
         system("clear");
-        
+
         if (opcao_modo_jogo == CPU_VS_HUMANO)
         {
             while (TRUE)
@@ -148,9 +148,9 @@ int main()
 
     srand(time(NULL));
 
-    for (int i = 0 ; i < QTD_JOGADORES ; i++)   //Seleção para 2 jogadores
+    for (int i = 0; i < QTD_JOGADORES; i++) // Seleção para 2 jogadores
     {
-        jogadas[i] = rand() % QTD_JOGADAS;    //Seleção entre 3 possíveis jogadas.
+        jogadas[i] = rand() % QTD_JOGADAS; // Seleção entre 3 possíveis jogadas.
     }
 
     if (opcao_modo_jogo == CPU_VS_HUMANO)
@@ -258,7 +258,8 @@ int main()
         contador++;
         main();
     }
-    if (contador > 1) {
+    if (contador > 1)
+    {
         contador--;
         return 0;
     }
@@ -267,7 +268,7 @@ int main()
     system("clear");
 
     printf("TELA DE APRESENTAÇÃO DO VENCEDOR\n\n");
-    
+
     if (placar[ZEZINHO] > placar[BERENICE] && placar[ZEZINHO] > placar[EMPATE])
     {
         printf("ZEZINHO É O GRANDE VENCEDOR!\n");
@@ -300,7 +301,7 @@ int main()
         switch (opcao_jogar_novamente)
         {
         case 1:
-            for (int i = 0 ; i < 3 ; i++)
+            for (int i = 0; i < 3; i++)
                 placar[i] = 0;
             contador = 1;
             opcao_modo_jogo = 0;
